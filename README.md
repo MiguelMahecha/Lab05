@@ -56,3 +56,11 @@ Al hacer una solicitud GET a http://localhost:3000 resivimos un HTML que solo di
 <script src="/main.9efaefbf9dfe58338292.hot-update.js"></script>
 </body>
 ```
+
+Ahora vamos a eliminar los archivos de este proyecto de REACT para remplazarlos con los archivos de Spring Boot.
+Cómo curiosidad, este es el comando que usamos en PowerShell
+```powershell
+Get-ChildItem | Where-Object { $_.Name -notlike "README.md" -and $_.Name -notlike ".gitignore" -and $_.Name -notlike ".git" } | Remove-Item -Force
+```
+
+Los archivos de esta parte del Lab están en un commit taggeado cómo 'Part2'.
