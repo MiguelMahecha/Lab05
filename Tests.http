@@ -1,0 +1,11 @@
+### GET request sin parámetros debe devolver static/index.html
+GET http://localhost:8080
+Accept: text/html
+
+### GET request a /greeting debe devolver templates/greeting.html
+GET http://localhost:8080/greeting
+Accept: text/html
+
+### GET request a /greeting?name=Joan debe devolver templates/greeting.html con 'name' = Joan
+GET http://localhost:8080/greeting?name=Joan
+Accept: text/html
