@@ -3,7 +3,8 @@
 
 .idea
 target
-*lock
+package-lock.json
+node_modules
 
 # User-specific stuff
 .idea/**/workspace.xml
