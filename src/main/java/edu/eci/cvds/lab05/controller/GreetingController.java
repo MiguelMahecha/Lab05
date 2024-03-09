@@ -1,4 +1,4 @@
-package edu.eci.cvds.lab05;
+package edu.eci.cvds.lab05.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
