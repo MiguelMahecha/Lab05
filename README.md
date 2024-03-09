@@ -10,6 +10,24 @@
 
 ## Respuestas
 
+## Parte I
+- ¿Qué pasa si no envío el método correcto?
+  - Si no se envía el método correcto (por ejemplo, se utiliza GET en lugar de POST), el servidor responderá con un 
+  código de estado HTTP 405 - Método no permitido (Method Not Allowed). Esto indica que el servidor no admite el método 
+  HTTP utilizado en la solicitud.
+- ¿Qué pasa si al body response HTML lo fuerzo a leerse como JSON?
+  - El contenido pierde su highlighting
+- ¿Por qué el preview de HTML no se ve igual a cuando accedo a la URL en un navegador web?
+  - El preview de HTML en herramientas como Postman puede no verse igual que cuando accedes a la URL en un navegador web 
+  debido a diferencias en la interpretación y renderizado del HTML. Postman proporciona una visualización básica del 
+  HTML, mientras que los navegadores web utilizan motores de renderizado más sofisticados que pueden interpretar y 
+  renderizar el HTML de manera más completa y precisa.
+- ¿Qué pasa si le envías un body a una solicitud GET?
+  - Según las especificaciones de HTTP, las solicitudes GET no deben tener un body. En la práctica, algunos servidores 
+  pueden ignorar el body de una solicitud GET, mientras que otros pueden responder con un código de estado 
+  400 - Solicitud incorrecta (Bad Request) si reciben un body en una solicitud GET. En general, es una buena 
+  práctica evitar enviar bodies en solicitudes GET y utilizar métodos como POST o PUT para enviar datos al servidor.
+
 ### Parte II
 - ¿Qué hace cada uno de los archivos en la aplicación?
 ```
@@ -95,3 +113,22 @@ Después procedimos a probar el funcionamiento. Las tres pruebas principales est
 es igual a alguno de los archivos del proyecto. Significa eso que es un recurso web dinámico o estático?
   - El resultado es idéntico salvo por la línea ```html<h1 th:text="|Hello, ${name}!|" />```.
   - Esta línea es reemplazada por el valor dado para el atributo ```name``` del Model
+
+## Parte IV
+- ¿Qué es RESTful?
+  - RESTful, abreviatura de Representational State Transfer, es un estilo arquitectónico para el desarrollo de servicios 
+  web que se basa en los principios de la web y el protocolo HTTP. Se caracteriza por ser sin estado, utilizar 
+  operaciones CRUD (Crear, Leer, Actualizar, Eliminar) a través de los métodos HTTP estándar, identificar recursos con 
+  URIs únicas y permitir la representación de recursos en diversos formatos como JSON o XML. La arquitectura RESTful 
+  promueve la interoperabilidad, escalabilidad y simplicidad en el diseño de sistemas distribuidos.
+- Si utilizo un framework como Boostrap CSS para qué el apartado gráfico se vea más profesional, ¿en qué capa se haría su uso?
+  - En la Vista, específicamente en los templates de HTML. Bootsrap CSS es una librería para facilitar el uso de CSS
+  la cual es una tecnología de Frontend.
+
+## Parte V
+- ¿Qué pasa si abro el sitio de juegos en dos navegadores difententes?
+  - Las dos comparten los mismos datos. Es decir, no percibe diferencias entre distintas tabs o sesiones.
+- Si quisiera qué a cada jugador le aparecieran independientemente sus respectivos saldos. ¿Qué habría que hacer?
+  - Tendría que hacer uso de Cookies, JSON Tokens o algún otro medio de autenticación para identificar a usuarios diferentes.
+  Los datos relacionados al juego se almacenan en objetos separados de forma que cada uno se modifica de acuerdo a la
+  identidad del usuario del cual proviene la solicitud.
